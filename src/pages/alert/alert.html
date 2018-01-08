@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Alerts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    Alerts are a great way to offer the user the ability to choose 
+    a specific action or list of actions. They also can provide 
+    the user with important information, or require them to make 
+    a decision (or multiple decisions).
+  </p>
+  <p>
+    From a UI perspective, Alerts can be thought of as a type 
+    of “floating” modal that covers only a portion of the screen. 
+    This means Alerts should only be used for quick actions like 
+    password verification, small app notifications, or quick 
+    options. More in depth user flows should be reserved for 
+    full screen ​<a href="https://ionicframework.com/docs/components/#modals">Modals</a>​.
+  </p>
+  <p>
+    Alerts are quite flexible, and can easily be customized.
+  </p>
+  <p>
+    For more information, Check out the <a href="https://ionicframework.com/docs/api/components/alert/AlertController">API docs</a>.
+  </p>
+  <h5>
+    Basic Alert
+  </h5>
+  <p>
+    Basic Alerts are typically used to notify the user about 
+    new information (a change in the app, a new feature, etc), 
+    an urgent situation that requires acknowledgement, or as a 
+    confirmation to the user that an action was successful or 
+    not.
+  </p>
+  <button ion-button block color="dark" (click)="doBasicAlert()">
+    Show Basic Alert
+  </button>
+  <h5>
+    Prompt Alert
+  </h5>
+  <p>
+    Prompts offer a way to input data or information. Often times 
+    Prompts will be used to ask the user for a password before 
+    moving forward in an application’s flow.
+  </p>
+  <button ion-button block color="dark" (click)="doPromptAlert()">
+    Show Prompt Alert
+  </button>
+  <h5>
+    Confirmation Alert
+  </h5>
+  <p>
+    Confirmation Alerts are used when it is required that the 
+    user explicitly confirms a particular choice before 
+    progressing forward in the app. A common example of the 
+    Confirmation Alert is checking to make sure a user wants 
+    to delete or remove a contact from their address book.
+  </p>
+  <button ion-button block color="dark" (click)="doConfirmationAlert()">
+    Show Confirmation Alert
+  </button>
+  <h5>
+    Radio Alert
+  </h5>
+  <p>
+    Radio Alerts are a type of Confirmation Alert, but use the 
+    Radio component to offer several choices. A set of options 
+    is provided to the user, but only one option can be chosen.
+  </p>
+  <button ion-button block color="dark" (click)="doRadioAlert()">
+    Show Radio Alert
+  </button>
+  <h5>
+    Checkbox Alert
+  </h5>
+  <p>
+    Checkbox Alerts are a type of Confirmation Alert, but use 
+    the Checkbox component to offer several choices. They 
+    offer the user a set of options to choose from.
+  </p>
+  <button ion-button block color="dark" (click)="doCheckboxAlert()">
+    Show Checkbox Alert
+  </button>
+</ion-content>

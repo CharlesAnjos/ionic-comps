@@ -1,0 +1,159 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Inputs
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    Inputs are essential for collecting and handling user input 
+    in a secure way. They should follow styling and interaction 
+    guidelines for each platform, so that they are intuitive for 
+    users to interact with. Ionic uses Angular 2’s form library, 
+    which can be thought of as two dependent pieces, Controls, 
+    and Control Groups.
+  </p>
+  <p>
+    Each input field in a form has a Control, a function that 
+    binds to the value in the field, and performs validation. 
+    A Control Group is a collection of Controls. Control Groups 
+    handle form submission, and provide a high level API that can 
+    be used to determine whether the entire form is valid.
+  </p>
+  <p>
+    A number of attributes that can be used to style forms and 
+    their various input fields are listed below. For more info 
+    on form logic, check out the <a href="https://ionicframework.com/docs/api/components/input/Input/">Inputs API docs</a>.
+  </p>
+
+  <h5>Fixed Inline Labels</h5>
+  <p>
+    Use fixed to place a label to the left of the input element. 
+    The label does not hide when text is entered. The input will 
+    align on the same position, regardless of the length of the 
+    label. Placeholder text can be used in conjunction with a 
+    fixed label.
+  </p>
+  <ion-list>
+  
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <h5>Floating Labels</h5>
+  <p>
+    Floating labels are labels that animate or “float” up when the 
+    input is selected. Add the floating attribute to an ion-label 
+    to use.
+  </p>
+  <p>
+    Enter text in the example to the right to see the floating 
+    labels in action.
+  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <h5>Inline Labels</h5>
+  <p>
+    An ion-label without any attributes is an inline label. The 
+    label does not hide when text is entered. Placeholder text 
+    can be used in conjunction with an inline label.
+  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button block>Sign In</button>
+  </div>
+
+  <h5>Insert Labels</h5>
+  <p>
+    By default each input item will fill 100% of the width 
+    of its parent element. Make the input inset by adding 
+    the inset attribute to the ion-list component.
+  </p>
+  <ion-list inset>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <h5>Placeholder Labels</h5>
+  <p>
+    Add the placeholder attribute to an input element to 
+    simulate the input’s label. When text is entered into 
+    the input, the placeholder label is hidden.
+  </p>
+  <ion-list>
+      
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <h5>Stacked Labels</h5>
+  <p>
+    A stacked label will always appear on top of the input. 
+    Add the stacked attribute to an ion-label to use. 
+    Placeholder text can be used in conjunction with an 
+    stacked label.
+  </p>
+  <ion-list>
+      
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+</ion-content>

@@ -1,0 +1,294 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cards
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    Cards are a great way to display important pieces of content, 
+    and are quickly emerging as a core design pattern for apps. 
+    They are a great way to contain and organize information, 
+    while also setting up predictable expectations for the user. 
+    With so much content to display at once, and often so little 
+    screen realestate, cards have fast become the design pattern 
+    of choice for many companies, including the likes of Google, 
+    Twitter, and Spotify. 
+  </p>
+  <p>
+    For mobile experiences, Cards make it easy to display the 
+    same information visually across many different screen 
+    sizes. They allow for more control, are flexible, and can 
+    even be animated. Cards are usually placed on top of one 
+    another, but they can also be used like a "page" and swiped 
+    between, left and right. 
+  </p>
+  <p>
+    Ionic apps are made of high-level building blocks called 
+    components. Components allow you to quickly construct an 
+    interface for your app. Ionic comes with a number of 
+    components, including modals, popups, and cards. Check out 
+    the examples below to see what each component looks like 
+    and to learn how to use each one. Once you’re familiar with 
+    the basics, head over to the 
+    <a href="https://ionicframework.com/docs/api">API docs</a> 
+    for ideas on how to customize each component.
+  </p>
+
+  <h5>Basic Cards</h5>
+  <p>
+    Cards are primarily a CSS component. To use a basic card, 
+    follow this structure:
+  </p>
+  <ion-card>
+    <ion-card-content>
+      This is just your basic card with some text to boot. Like it?  Keep scrolling...
+    </ion-card-content>
+  </ion-card>
+
+  <h5>Card Headers</h5>
+  <p>
+    Just like a normal page, cards can be customized to include 
+    headers. To add a header to a card, add the ion-card-header 
+    component inside of your card:
+  </p>
+  <ion-card>
+    <ion-card-header>
+      Header
+    </ion-card-header>
+    <ion-card-content>
+      The British use the term "header", but the American term 
+      "head-shot" the English simply refuse to adopt.
+    </ion-card-content>
+  </ion-card>
+
+  <h5>List in Cards</h5>
+  <p>
+    A card can contain a list of items. Add an ion-list component 
+    inside of the ion-card-content to display a list:
+  </p>
+  <ion-card>
+    <ion-card-header>
+      Explore Nearby
+    </ion-card-header>
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Shopping
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Cafe
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Dog Park
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="beer" item-start></ion-icon>
+        Pub
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="planet" item-start></ion-icon>
+        Space
+      </button>
+    </ion-list>
+  </ion-card>
+  
+  <h5>Images in Cards</h5>
+  <p>
+      Images often vary in size, so it is important that 
+      they adopt a consistent style throughout your app. 
+      Images can easily be added to cards. Adding an image 
+      to a card will give the image a constant width, and 
+      a variable height. Lists, headers, and other card 
+      components can easily be combined with image cards. 
+      To add an image to a card, use the following markup:
+  </p>
+  <ion-card>
+    <img src="assets/imgs/nin-live.png"/>
+    <ion-card-content>
+      <ion-card-title>
+        Nine Inch Nails Live
+      </ion-card-title>
+      <p>
+        The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='musical-notes'></ion-icon>
+          Listen
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+      
+  <ion-card>
+    <div>
+      <img src="assets/imgs/badu-live.png"/>
+    </div>
+    <ion-card-content>
+      <ion-card-title>
+        Erykah Badu
+      </ion-card-title>
+      <p>
+      American singer-songwriter, record producer, activist, and actress, Badu's style is a prime example of neo-soul.
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='musical-notes'></ion-icon>
+          Listen
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+      
+  <ion-card>
+    <div>
+      <img src="assets/imgs/queen-live.png"/>
+    </div>
+    <ion-card-content>
+      <ion-card-title>
+        Queen
+      </ion-card-title>
+      <p>
+        The British rock band formed in London in 1970, and is considered one of the biggest stadium rock bands in the world.
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='musical-notes'></ion-icon>
+          Listen
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+      
+  <ion-card>
+    <div>
+      <img src="assets/imgs/rundmc-live.png"/>
+    </div>
+    <ion-card-content>
+      <ion-card-title>
+        Run-D.M.C.
+      </ion-card-title>
+      <p>
+        The American hip hop group widely acknowledged as one of the most influential acts in the history of hip hop.
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='musical-notes'></ion-icon>
+          Listen
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <h5>Images in Cards</h5>
+  <p>
+      Cards can be used to achieve a multitude of designs. We 
+      provide many of the elements to achieve common designs, 
+      but sometimes it will be necessary to add custom styles. 
+      Adding background images to cards is a perfect example 
+      of how adding custom styles can achieve a completely 
+      different look.
+  </p>
+  <p>
+      The following html can be added to the content of a page:
+  </p>
+  <p class="card-background-page">
+    <ion-card>
+      <img src="assets/imgs/card-saopaolo.png"/>
+      <div class="card-title">São Paulo</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card>
+  
+    <ion-card>
+      <img src="assets/imgs/card-amsterdam.png"/>
+      <div class="card-title">Amsterdam</div>
+      <div class="card-subtitle">64 Listings</div>
+    </ion-card>
+  
+    <ion-card>
+      <img src="assets/imgs/card-sf.png"/>
+      <div class="card-title">San Francisco</div>
+      <div class="card-subtitle">72 Listings</div>
+    </ion-card>
+  
+    <ion-card>
+      <img src="assets/imgs/card-madison.png"/>
+      <div class="card-title">Madison</div>
+      <div class="card-subtitle">28 Listings</div>
+    </ion-card>
+  </p>
+
+</ion-content>

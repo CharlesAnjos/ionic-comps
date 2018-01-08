@@ -1,0 +1,200 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Lists
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    Lists are used to display rows of information, such as a 
+    contact list, playlist, or menu. Or maybe something crazy 
+    we don’t even know exists yet!
+  </p>
+  <p>
+    For more information, Check out the <a href="https://ionicframework.com/docs/api/components/list/List">List API docs</a> and the <a href="https://ionicframework.com/docs/api/components/item/Item">Item API docs</a>.
+  </p>
+
+  <h5>Basic Usage</h5>
+  <p>
+    By default, all lists will be styled with divider lines:
+  </p>
+  <ion-list class="list-example">
+      <button ion-item *ngFor="let item of items; let i=index" 
+        (click)="itemSelected(item)">
+        {{ item }}
+      </button>
+  </ion-list>
+
+  <h5>No Lines</h5>
+  <p>
+    Adding the no-lines attribute will hide the dividers between 
+    list items:
+  </p>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button> 
+  </ion-list>
+
+  <h5>Inset List</h5>
+  <p>
+    Lists don’t have an outside margin by default. 
+    To add one, add the inset attribute to ion-list component.
+  </p>
+
+  <ion-list inset>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button> 
+  </ion-list>
+
+  <h5>List Dividers</h5>
+  <p>
+    To divide groups of items, use ion-item-group instead of 
+    ion-list. Use ion-item-divider components to divide the group 
+    in to multiple sections:
+  </p>
+
+  <ion-item-group>
+    <ion-item-divider color="light">A</ion-item-divider>
+    <ion-item>Angola</ion-item>
+    <ion-item>Argentina</ion-item>
+  </ion-item-group>
+
+  <h5>List Headers</h5>
+  <p>
+    Each list can include a header at the top of the list:
+  </p>
+
+  <ion-list>
+    <ion-list-header>
+      Action
+    </ion-list-header>
+    <ion-item>Terminator II</ion-item>
+    <ion-item>The Empire Strikes Back</ion-item>
+    <ion-item>Blade Runner</ion-item>
+  </ion-list>
+
+  <h5>Icon List</h5>
+
+  <p>
+    Adding icons to list items is a great way to hint about 
+    the contents of each item. The position of the icon can 
+    be set using the item-left and item-right attributes. 
+    The size of the icon defaults to small, and can be made 
+    larger with the large attribute.
+  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+        Herbology
+      <ion-icon name="rose" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <h5>Avatar List</h5>
+
+  <p>
+    Item avatars showcase an image larger than an icon, but 
+    smaller than a thumbnail. To use an avatar, add an 
+    ion-avatar component inside of an item. The position of 
+    the avatar can be set using the item-left and item-right 
+    attributes:
+  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/avatar-ben.png">
+      </ion-avatar>
+      <h2>Ben</h2>
+      <p>Use the force.</p>
+    </ion-item>
+  </ion-list>
+
+  <h5>Multi-line List</h5>
+  <p>
+    Multi-line lists are identical to regular lists, except 
+    items have multiple lines of text. When an ion-item 
+    component contains multiple header or paragraph elements, 
+    it will automatically expand it’s height to fit the new 
+    lines of text. Below is an example with three lines of 
+    text:
+  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/avatar-finn.png">
+      </ion-avatar>
+      <h2>Finn</h2>
+      <h3>Don't Know What To Do!</h3>
+      <p>I've had a pretty messed up day. If we just...</p>
+    </ion-item>
+  </ion-list>
+
+  <h5>Sliding List</h5>
+  <p>
+    Sliding items can be swiped to the left or right to reveal 
+    a hidden set of buttons. To use a sliding item, add an 
+    ion-item-sliding component inside of an ion-list component. 
+    Next, add an ion-item-options component inside of the 
+    sliding item to contain the buttons.
+  </p>
+  <p>
+      For more information, Check out the <a href="https://ionicframework.com/docs/api/components/item/ItemSliding">API docs</a>.
+  </p>
+
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/slimer.jpg">
+        </ion-avatar>
+        <h2>Slimer</h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <h5>Thumbnail List</h5>
+  <p>
+    Item thumbnails showcase an image that takes up the entire 
+    height of an item. To use a thumbnail, add an ion-thumbnail 
+    component inside of an item. The position of the thumbnail 
+    can be set using the item-left and item-right attributes:
+  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

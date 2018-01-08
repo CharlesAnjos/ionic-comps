@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Loading
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    The Loading component is an overlay that prevents user 
+    interaction while indicating activity. By default, it shows 
+    a spinner based on the mode. Dynamic content can be passed 
+    and displayed with the spinner. The spinner can be hidden or 
+    customized to use several predefined options. The loading 
+    indicator is presented on top of other content even during 
+    navigation.
+  </p>
+  <h5>Basic Usage</h5>
+  <button ion-button large (click)="presentLoading()">Show Loading</button>
+</ion-content>
